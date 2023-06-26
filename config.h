@@ -15,13 +15,13 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_orange[]      = "orange";
-static const char col_cyan[]        = "#005577";
+/* static const char col_cyan[]        = "#005577"; */
 static const unsigned int baralpha = OPAQUE;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_orange  },
+	/*               fg         bg          border   */
+	[SchemeNorm] = { col_gray3, col_gray1,  col_gray2 },
+	[SchemeSel]  = { col_gray4, col_orange, col_orange  },
 };
 static const unsigned int alphas[][3]      = {
     /*               fg      bg        border*/
@@ -37,9 +37,10 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class          instance    title       tags mask     isfloating   monitor */
+	{ "Gimp",         NULL,       NULL,       0,            1,           -1 },
+	{ "Firefox",      NULL,       NULL,       1 << 8,       0,           -1 },
+  { "Pavucontrol",  NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
